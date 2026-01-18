@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Advanced Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>✍️ My Advanced Blog</h1>
+  <p>Share your thoughts with the world</p>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<div class="create-card glass">
+  <h2>Create a New Post</h2>
+
+  <input id="title" placeholder="Post Title">
+  <textarea id="content" placeholder="Write your story..."></textarea>
+  <input type="file" id="image">
+  <button onclick="createPost()">🚀 Publish Post</button>
+</div>
+
+<h2 style="text-align:center;">📰 Latest Posts</h2>
+<div id="loader" class="loader hidden"></div>
+
+<div id="posts" class="posts-container"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

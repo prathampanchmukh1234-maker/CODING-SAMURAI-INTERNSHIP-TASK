@@ -1,0 +1,6 @@
+
+body{font-family:Arial,sans-serif;text-align:center;background:#f4f4f4;}
+.products{display:flex;justify-content:center;gap:20px;}
+.product{background:white;padding:15px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.1);}
+button{background:green;color:white;border:none;padding:8px 12px;cursor:pointer;}
+#cart{list-style:none;}

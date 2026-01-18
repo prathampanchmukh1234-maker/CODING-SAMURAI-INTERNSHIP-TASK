@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(120deg, #141e30, #243b55);
+  margin: 0;
+  color: white;
+  min-height: 100vh;
+}
+
+/* ---------- GLASS CONTAINER ---------- */
+.glass {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* ---------- HEADER ---------- */
+header {
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+  background: #ff4757;
+  transform: scale(1.05);
+}
+
+/* ---------- INPUTS ---------- */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* ---------- LOGIN CARD ---------- */
+.auth-container {
+  width: 350px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ---------- BLOG CREATE CARD ---------- */
+.create-card {
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ---------- POSTS GRID ---------- */
+.posts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  width: 90%;
+  margin: auto;
+}
+
+/* ---------- POST CARD ---------- */
+.post {
+  background: white;
+  color: black;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  animation: slideUp 0.6s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background image effect inside post */
+.post::before {
+  content: "";
+  background: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+}
+
+.post h3, .post p, .post small, .post img {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- LOADER ---------- */
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 5px solid white;
+  border-top: 5px solid #ff6b6b;
+  border-radius: 50%;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .create-card {
+    width: 90%;
+  }
+}
